@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.pagination {
+  @apply hover:text-slate-700
+}
+
+.table-border {
+  @apply border px-10 py-2
+}
+
+.action-button {
+  @apply px-3 py-1 mx-1 bg-slate-300 rounded-xl hover:bg-slate-400
+}
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,4 +42,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
