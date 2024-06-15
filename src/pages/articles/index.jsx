@@ -11,6 +11,7 @@ export default function Articles () {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
+        setLoading(true);
         const token = localStorage.getItem('token')
         const fetchData = async () => {
             try {
@@ -32,7 +33,7 @@ export default function Articles () {
     return (
         <>
         {loading ? <Loading/> : (
-        <div className="min-h-[90vh] max-h-full w-full bg-slate-300 p-6 flex flex-col items-center">
+        <div className="min-h-[90vh] max-h-full w-full bg-slate-200 p-6 flex flex-col items-center">
             <div className="flex flex-wrap gap-4 items-center justify-center">
                 <CardArticle sendArticles={articles}/>
             </div>

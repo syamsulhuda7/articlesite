@@ -63,7 +63,7 @@ export default function Sidebar() {
         </Link>}
           {user.role == 'admin' && <Link
           className={
-            router.pathname == "/users" ? "text-slate-300" : "text-slate-500"
+            router.pathname.includes("/users") ? "text-slate-300" : "text-slate-500"
           }
           href={"/users"}
         >
@@ -71,7 +71,7 @@ export default function Sidebar() {
         </Link>}
         <Link
           className={
-            router.pathname == "/articles" || "/articles/[article]" ? "text-slate-300" : "text-slate-500"
+            router.pathname.includes("/articles") ? "text-slate-300" : "text-slate-500"
           }
           href={"/articles"}
         >
