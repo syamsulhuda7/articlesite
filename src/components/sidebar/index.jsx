@@ -48,6 +48,8 @@ export default function Sidebar() {
     signOut();
   };
 
+  console.log(router);
+
   return (
     <div className=" min-h-[90vh] max-h-full w-52 bg-cyan-950 px-6 py-4 flex flex-col justify-between">
       <div className="flex flex-col gap-3">
@@ -69,7 +71,7 @@ export default function Sidebar() {
         </Link>}
         <Link
           className={
-            router.pathname == "/articles" ? "text-slate-300" : "text-slate-500"
+            router.pathname == "/articles" || "/articles/[article]" ? "text-slate-300" : "text-slate-500"
           }
           href={"/articles"}
         >
